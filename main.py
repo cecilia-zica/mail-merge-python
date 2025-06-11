@@ -12,7 +12,6 @@ PATH_LETTER_FILE = "./Input/Letters/starting_letter.txt"
 
 with open(PATH_NAMES_FILE, "r") as invited_names_file:
     raw_names = invited_names_file.readlines()
-    print(raw_names)
 
     # - - - Cleaning names - - -
     clean_names = []
@@ -36,7 +35,7 @@ with open(PATH_LETTER_FILE, "r") as letter_file:
 all_new_letters = []
 for index_letter, letter in enumerate(personalized_letters):
     name_in_letter = clean_names[index_letter]
-    file_name = f"./Output/ReadyToSend/carta_{name_in_letter}.txt"
+    file_name = f"./Output/ReadyToSend/letter_for_{name_in_letter}.txt"
     with open(file_name, "w") as new_file:
         new_file.write(letter)
 
